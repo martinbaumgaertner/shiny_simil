@@ -16,6 +16,10 @@ data<-lapply(list.files("data",full.names = T,pattern="wordemb"),
 names(data)<-str_remove_all(list.files("data",pattern="wordemb"),".Rds")
 
 ui <- fluidPage(
+  tags$style(type = "text/css", "
+              .js-irs-0 .irs-bar {border-top-color: #80ba24;border-bottom-color: #80ba24;}
+             .js-irs-0 .irs-bar-edge {border-color: #80ba24;}
+             .js-irs-0 .irs-single, .js-irs-0 .irs-bar-edge, .js-irs-0 .irs-bar, .js-irs-0 .irs-from, .js-irs-0 .irs-to {background: #80ba24;}"),
     sidebarLayout(
         sidebarPanel(textInput("searchword", "Word", value = "inflation", width = NULL, placeholder = NULL),
                      #selectInput("model", "Model:",names(data)),
@@ -53,7 +57,8 @@ server <- function(input, output) {
             formattable(align = c("c","c","r"),
                         list(`Rank` = formatter("span", style = ~ formattable::style(font.weight = "bold")),
                              `Word` = formatter("span", style = ~ formattable::style(font.weight = "bold")),
-                             `Similarity` = color_bar("#dc3545")))
+                             `Similarity` = color_bar(#"#dc3545"
+                               "#80ba24")))
         
         return(a)
     })
