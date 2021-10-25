@@ -5,9 +5,9 @@ account: alpen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4618843
-bundleId: 5015159
+bundleId: 5175080
 url: https://alpen.shinyapps.io/shiny_simil/
-when: 1631180069.90665
-lastSyncTime: 1631180069.90665
+when: 1635175782.70702
+lastSyncTime: 1635175782.70702
 asMultiple: FALSE
 asStatic: FALSE
